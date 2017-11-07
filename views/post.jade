@@ -1,0 +1,15 @@
+extends ./layout
+block heading
+  title #{post.title}
+  link(rel="stylesheet", href="/stylesheets/post.css")
+block content
+  section.post
+    header(style="--header-color: #{post.color}; --header-img: url(#{post.img})").post-header
+      h1.post-header-title #{post.title}
+    main.post-main
+      article.post-main-content
+        for sec in post.sections
+          section.post-main-content-section
+            h2.section-subtitle #{sec.subtitle}
+            p.section-content #{sec.content}
+  

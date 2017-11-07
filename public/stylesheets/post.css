@@ -1,0 +1,108 @@
+:root {
+  --header-height: 70vh;
+  --header-color: #ffa500;
+  --header-img: 'url(/images/ph1.jpeg)';
+  --header-font-size: calc(var(--header-height) / 8);
+  --header-index: 500;
+  --main-index: calc(var(--header-index) - 1);
+  --base-font-size: calc(50vh / 6 / 1.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.post {
+  position: absolute;
+  top: var(--nav-height);
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+}
+
+.post .post-header {
+  width: 100vw;
+  height: var(--header-height);
+  background-color: var(--header-color);
+  background: var(--header-img) center center no-repeat fixed;
+  background-size: cover;
+  margin-bottom: 3vh;
+  z-index: var(--header-index);
+  box-shadow: 0px 0px 10px 2px rgba(21, 21, 21, 0.8);
+  position: relative;
+}
+
+.post .post-header .post-header-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 80%;
+  height: auto;
+  text-align: center;
+  font-size: var(--header-font-size);
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(21, 21, 21, 0.8);
+}
+
+.post .post-main {
+  z-index: var(--main-index);
+  width: 60%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 599px) {
+  .post .post-main {
+    width: 80%;
+  }
+}
+
+.post .post-main .post-main-content {
+  width: 100%;
+  height: auto;
+}
+
+.post .post-main .post-main-content .post-main-content-section {
+  width: 100%;
+  height: auto;
+  min-height: 30vh;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.post .post-main .post-main-content .post-main-content-section .section-subtitle {
+  font-size: var(--base-font-size);
+  text-transform: capitalize;
+  text-align: center;
+  color: #2c2c2c;
+  text-decoration: dotted underline #1b1b1b;
+  margin-bottom: 1vh;
+}
+
+.post .post-main .post-main-content .post-main-content-section .section-content {
+  font-size: calc(var(--base-font-size) / 1.8);
+  text-align: left;
+  color: #2c2c2c;
+}
+
+.post .post-main .post-main-content .post-main-content-section .section-content::first-letter {
+  font-size: calc(var(--base-font-size) / 1);
+  color: #111;
+  font-weight: 600;
+}

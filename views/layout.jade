@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    if title 
+      title= title
+    link(rel='stylesheet', href='/stylesheets/main.min.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/stylesheets/fontello.css")
+    link(rel="manifest", href="./manifest.json")
+    link(rel="stylesheet",href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+    block heading
+  body
+    block navigation
+      include ./nav.jade
+    block content
+    script id="__bs_script__"
+      //<![CDATA[
+        document.write("<script async   src='http://HOST:3001/browser-sync/browser-sync-client.js?  v=2.18.13'><\/script>".replace("HOST", location.hostname));
+      //]]>

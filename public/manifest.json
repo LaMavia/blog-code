@@ -1,0 +1,19 @@
+{
+  "short_name": "Express",
+  "name": "Express Node Blog",
+  "icons": [
+    {
+      "src": "./logo.svg",
+      "sizes": [
+        "192x192",
+        "216x216",
+        "512x512"
+      ],
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#2c2c2c",
+  "background_color": "#2c2c2c"
+}

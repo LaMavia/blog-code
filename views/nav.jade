@@ -1,0 +1,13 @@
+mixin link(path,name)
+  li.nav-path
+    a(href=path class="icon-#{name}").nav-path-link
+
+nav.nav
+  img(src="/images/planet.svg", alt="").nav-logo
+  ul.nav-links
+    +link('/','home')
+    
+      
+    
+    
+    
